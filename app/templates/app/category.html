@@ -1,0 +1,15 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% for recipe in recipes %}
+<div class="jumbotron">
+    <h1>{{recipe.Title}}</h1>
+    <p class="lead">This is the recipe </p>
+    <p><a href="{%url 'recipe' recipe.id%}" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+{%empty%}
+<p>no recipes here lad</p>
+{%endfor%}
+
+{% endblock %}

@@ -25,6 +25,8 @@ urlpatterns = [
              }
          ),
          name='login'),
+    path('<int:category>/', views.category, name="category"),
+    path('recipe/<int:recipe_id>/', views.recipe, name="recipe"),
     path('logout/', LogoutView.as_view(next_page='/'), name='logout'),
     path('admin/', admin.site.urls),
 ]

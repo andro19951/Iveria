@@ -1,0 +1,14 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ recipe.Title }}.</h2>
+<h3>{{ recipe.description }}</h3>
+{% for Ingredient in Ingredients%}
+{{Ingredient.Ingredient}}<br/>
+{%empty%}
+no Ingredients here mate
+{%endfor%}
+<p>Use this area to provide additional information.</p>
+
+{% endblock %}

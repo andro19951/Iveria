@@ -8,6 +8,10 @@ from django.db import models
 class Recipe(models.Model):
     Title = models.CharField(max_length=64)
     description = models.TextField()
+    Image = models.ImageField( upload_to='static/app/images', blank=True, null=True)
+    shortdescription = models.TextField(null = True)
+    views = models.IntegerField( null = True)
+    loves = models.IntegerField( null = True)
     
     
     def __str__(self):
